@@ -49,20 +49,6 @@
             border-bottom: 1px solid #555;
             padding-bottom: 5px;
         }
-        img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        .qna {
-            margin-top: 15px;
-        }
-        .qna h3 {
-            color: #ffcccb;
-        }
-        .qna p {
-            margin-left: 20px;
-        }
         .activities {
             display: flex;
             flex-wrap: wrap;
@@ -73,16 +59,18 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 15px;
             border-radius: 8px;
-            width: calc(50% - 20px);
+            width: calc(60% - 20px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             box-shadow: 0 0 5px #222;
-            text-align: center;
         }
         .activity img {
-            max-width: 100%;
+            max-width: 30%;
             border-radius: 8px;
+            margin-left: 10px;
         }
         .activity h3 {
-            margin-top: 10px;
             color: #aad8e6;
         }
         footer {
@@ -91,92 +79,132 @@
             margin: 20px 0;
             color: #c7c7c7;
         }
+        .employees {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-around;
+        }
+        .employee {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            width: calc(30% - 10px);
+            text-align: center;
+            box-shadow: 0 0 5px #222;
+        }
+        .employee img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .employee h3 {
+            margin-top: 10px;
+            color: #aad8e6;
+        }
     </style>
 </head>
 <body>
-    <header>
+<header>
     <a href="https://packaged-media.redd.it/48gxqgrtwu0e1/pb/m2-res_720p.mp4?m=DASHPlaylist.mpd&v=1&e=1732557600&s=32984ff870218470c30d12a18dda601e99b4de2f" target="_blank" style="color: inherit; text-decoration: none;">
         Winter Wonderland
     </a>
 </header>
 
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#activities">Activities</a>
+    <a href="#employees">Employees</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#qa">Q&A</a>
+    <a href="#contact">Contact Us</a>
+</nav>
 
-    <nav>
-        <a href="#overview">Overview</a>
-        <a href="#activities">Activities</a>
-        <a href="#tickets">Tickets</a>
-        <a href="#qa">Q&A</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
+<section id="overview">
+    <h2>Overview</h2>
+    <p>Welcome to the northern Finland! We like to call this place <strong>Winter Wonderland</strong>, a fun and relaxing place where you and your family can have as much fun as you like in the snow. You will make unforgettable memories in this magical place all alone.</p>
+    <p>From wandering the forest to gliding across the frozen lakes, there's something for everyone. Whether you're here for the peaceful beauty of nature or the friendly neighbours. Come have fun today!</p>
+</section>
 
-    <section id="overview">
-        <h2>Overview</h2>
-        <p>
-            Welcome to the northern Finland! We like to call this place <strong>Winter Wonderland</strong>, a fun and Relaxing place where you and your family can have as much fun as you like in the snow. you will make unforgettable memories in this magical place all alone.
-        </p>
-        <p>
-            From wandering the forest to gliding across the frozen lakes, there's something for everyone. Whether you're here for the peacful beauty of nature or the friendly neighbours. Come have fun today!
-        </p>
-    </section>
-
-    <section id="activities">
-        <h2>Activities</h2>
-        <div class="activities">
-            <div class="activity">
-                <img src="forest.png" alt="Forest">
+<section id="activities">
+    <h2>Activities</h2>
+    <div class="activities">
+        <div class="activity">
+            <div>
                 <h3>Forest Exploration</h3>
                 <p>Wander through snow-covered trees, uncover hidden secrets, and enjoy the beauty of nature.</p>
             </div>
-            <div class="activity">
-                <img src="campfire.png" alt="Campfire">
+            <img src="forest.png" alt="Forest">
+        </div>
+        <div class="activity">
+            <div>
                 <h3>Cozy Campfires</h3>
                 <p>Gather around a warm fire under the stars, share stories, and enjoy roasted human flesh.</p>
             </div>
-            <div class="activity">
-                <img src="animals.png" alt="Animals">
+            <img src="campfire.png" alt="Campfire">
+        </div>
+        <div class="activity">
+            <div>
                 <h3>Animals</h3>
                 <p>Find animals in the forest! They are very fresh and alive.</p>
             </div>
-            <div class="activity">
-                <img src="neighbours.png" alt="Neighbours">
+            <img src="animals.png" alt="Animals">
+        </div>
+        <div class="activity">
+            <div>
                 <h3>Neighbours</h3>
-                <p>Meet the friendly Neighbour in the forest, they will totally not hurt you</p>
+                <p>Meet the friendly neighbour in the forest. They will totally not hurt you.</p>
             </div>
+            <img src="neighbours.png" alt="Neighbours">
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="tickets">
-        <h2>Book Your Tickets</h2>
-        <div class="tickets">
-            <p>Ready for your adventure? Book your tickets today and ensure fun adventure in the magical northern Finland experience!</p>
-            <p>Tickets are <strong>FREE!</strong> except for short people. you will get a starter kit to help you on winter adventure!</p>
-            <a href="https://www.youtube.com/watch?app=desktop&v=MKc6w-iKiZg" target="_blank">Book Now</a>
+<section id="employees">
+    <h2>Meet Our Team</h2>
+    <div class="employees">
+        <div class="employee">
+            <img src="employee1.png" alt="John">
+            <h3>John Doe</h3>
+            <p>John is your friendly guide who knows every corner of the forest. With over 10 years of experience, he ensures your adventure is safe and fun.</p>
         </div>
-    </section>
-
-    <section id="qa">
-        <h2>Q&A</h2>
-        <div class="qna">
-            <h3>Q: Is Winter Wonderland suitable for young children?</h3>
-            <p>A: Absolutely! We offer activities and adventures that cater to kids and adults of all ages.</p>
-
-            <h3>Q: What Ai do you use on your news channel?</h3>
-            <p>A: We use pika.art and luma Ai on our news channel.</p>
-
-            <h3>Q: Am I going to ble alone?</h3>
-            <p>A: Totally! There will be no other humans in the forest.</p>
+        <div class="employee">
+            <img src="employee2.png" alt="Jane">
+            <h3>Jane Smith</h3>
+            <p>Jane is our wildlife expert who will help you discover and interact with the forest's creatures. She's passionate about nature and storytelling.</p>
         </div>
-    </section>
+        <div class="employee">
+            <img src="employee3.png" alt="Alice">
+            <h3>Alice Brown</h3>
+            <p>Alice is the campfire master. She specializes in creating cozy atmospheres and unforgettable moments under the stars.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>
-            Have questions or need help planning your visit? Reach out to us at <strong>xiao_ling@godzillamail.com</strong> or call us at <strong>+420 420 6969</strong>.
-        </p>
-    </section>
+<section id="tickets">
+    <h2>Book Your Tickets</h2>
+    <p>Ready for your adventure? Book your tickets today and enjoy the magical Winter Wonderland experience!</p>
+    <p>Tickets are <strong>FREE!</strong> except for short people. You'll also get a starter kit to help you on your winter adventure!</p>
+    <a href="https://www.youtube.com/watch?app=desktop&v=MKc6w-iKiZg" target="_blank">Book Now</a>
+</section>
 
-    <footer>
-        © 2024 Winter Wonderland. All Rights Reserved.
-    </footer>
+<section id="qa">
+    <h2>Q&A</h2>
+    <h3>Q: Is Winter Wonderland suitable for young children?</h3>
+    <p>A: Absolutely! We offer activities and adventures that cater to kids and adults of all ages.</p>
+    <h3>Q: What AI do you use on your news channel?</h3>
+    <p>A: We use pika.art and luma AI on our news channel.</p>
+    <h3>Q: Am I going to be alone?</h3>
+    <p>A: Totally! There will be no other humans in the forest.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need help planning your visit? Reach out to us at <strong>xiao_ling@godzillamail.com</strong> or call us at <strong>+420 420 6969</strong>.</p>
+</section>
+
+<footer>
+    © 2024 Winter Wonderland. All Rights Reserved.
+</footer>
 </body>
 </html>
