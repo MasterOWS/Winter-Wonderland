@@ -38,7 +38,7 @@
         section {
             margin: 20px auto;
             width: 90%;
-            max-width: 1000px; /* Adjusted for overall page width */
+            max-width: 1000px;
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
@@ -57,35 +57,56 @@
         }
         .activity {
             background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
-            width: calc(48% - 20px);
+            width: calc(48% - 20px); /* Adjusted width */
             box-shadow: 0 0 5px #222;
             display: flex;
+            flex-direction: row; /* Side-by-side layout for text and image */
             align-items: center;
-            justify-content: space-between;
-            gap: 15px;
+            justify-content: space-between; /* Space between text and image */
+            text-align: left;
         }
         .activity img {
-            max-width: 40%; /* Image takes up 40% of the box */
+            max-width: 90%; /* Increased image size */
+            height: auto;
             border-radius: 8px;
         }
-        .activity-content {
-            flex: 1; /* The text content takes up the remaining space */
-            text-align: left; /* Aligns text to the left */
-        }
-        .activity-content h3 {
+        .activity h3 {
             color: #aad8e6;
-            margin: 0 0 10px;
+            margin-bottom: 10px;
         }
-        .activity-content p {
-            margin: 0;
+        .activity p {
+            margin-bottom: 10px;
         }
         footer {
             text-align: center;
             font-size: 14px;
             margin: 20px 0;
             color: #c7c7c7;
+        }
+        .employees {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-around;
+        }
+        .employee {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            width: calc(30% - 10px);
+            text-align: center;
+            box-shadow: 0 0 5px #222;
+        }
+        .employee img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .employee h3 {
+            margin-top: 10px;
+            color: #aad8e6;
         }
     </style>
 </head>
@@ -115,32 +136,53 @@
     <h2>Activities</h2>
     <div class="activities">
         <div class="activity">
-            <div class="activity-content">
+            <div>
                 <h3>Forest Exploration</h3>
                 <p>Wander through snow-covered trees, uncover hidden secrets, and enjoy the beauty of nature.</p>
             </div>
             <img src="forest.png" alt="Forest">
         </div>
         <div class="activity">
-            <div class="activity-content">
+            <div>
                 <h3>Cozy Campfires</h3>
                 <p>Gather around a warm fire under the stars, share stories, and enjoy roasted human flesh.</p>
             </div>
             <img src="campfire.png" alt="Campfire">
         </div>
         <div class="activity">
-            <div class="activity-content">
+            <div>
                 <h3>Animals</h3>
                 <p>Find animals in the forest! They are very fresh and alive.</p>
             </div>
             <img src="animals.png" alt="Animals">
         </div>
         <div class="activity">
-            <div class="activity-content">
+            <div>
                 <h3>Neighbours</h3>
                 <p>Meet the friendly neighbour in the forest. They will totally not hurt you.</p>
             </div>
             <img src="neighbours.png" alt="Neighbours">
+        </div>
+    </div>
+</section>
+
+<section id="employees">
+    <h2>Meet Our Team</h2>
+    <div class="employees">
+        <div class="employee">
+            <img src="employee1.png" alt="John">
+            <h3>John Doe</h3>
+            <p>John is your friendly guide who knows every corner of the forest. With over 10 years of experience, he ensures your adventure is safe and fun.</p>
+        </div>
+        <div class="employee">
+            <img src="employee2.png" alt="Jane">
+            <h3>Jane Smith</h3>
+            <p>Jane is our wildlife expert who will help you discover and interact with the forest's creatures. She's passionate about nature and storytelling.</p>
+        </div>
+        <div class="employee">
+            <img src="employee3.png" alt="Alice">
+            <h3>Alice Brown</h3>
+            <p>Alice is the campfire master. She specializes in creating cozy atmospheres and unforgettable moments under the stars.</p>
         </div>
     </div>
 </section>
