@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - Winter Wonderland Adventure</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: url('northern-finland-background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f8f8f2;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 36px;
+            color: #c7c7c7;
+            text-shadow: 2px 2px 4px #000;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        nav a {
+            color: #aad8e6;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1000px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #333;
+        }
+        h2 {
+            color: #aad8e6;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #222;
+        }
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #f8f8f2;
+            font-size: 16px;
+        }
+        /* Ensure consistent width for both input fields and dropdowns */
+        .form-container select {
+            width: 100%;
+        }
+        .form-container input[type="number"] {
+            width: 100%;
+        }
+        .form-container button {
+            background-color: #aad8e6;
+            border: none;
+            color: #000;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #7ab8d4;
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            margin: 20px 0;
+            color: #c7c7c7;
+        }
+        .error-message {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    Winter Wonderland
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html">Activities</a>
+    <a href="index.html">Employees</a>
+    <a href="index.html">Q&A</a>
+    <a href="index.html">Contact Us</a>
+</nav>
+
+<section>
+    <h2>Purchase Your Tickets</h2>
+    <p>Ready to visit Winter Wonderland? Choose the number of tickets you'd like and complete the form below to purchase your tickets!</p>
+    
+    <div class="form-container">
+        <form id="ticket-form" action="thankyou.html" method="POST" onsubmit="return validateForm()">
+            <label for="name">Username</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your Username">
+
+            <label for="ticket-type">Ticket Type</label>
+            <select id="ticket-type" name="ticket-type" required>
+                <option value="adult">Adult Ticket</option>
+                <option value="child">Child Ticket</option>
+                <option value="Short">Short Person Ticket</option>
+            </select>
+
+            <label for="quantity">Number of Tickets</label>
+            <input type="number" id="quantity" name="quantity" min="-1" max="69420" required>
+
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="Bitcoin">Bitcoin</option>
+                <option value="Robux">Robux</option>
+                <option value="V-bucks">V-bucks</option>
+            </select>
+
+            <button type="submit">Complete Purchase</button>
+        </form>
+        <div id="error-message" class="error-message" style="display: none;">The amount of girlfriends/boyfriends is false. Please enter the correct amount!</div>
+    </div>
+</section>
+
+<footer>
+    © 2024 Winter Wonderland. All Rights Reserved.
+</footer>
+
+
+</body>
+</html>
