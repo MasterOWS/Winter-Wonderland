@@ -80,53 +80,6 @@
             margin: 20px 0;
             color: #c7c7c7;
         }
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            position: relative;
-        }
-        .modal-content video {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        /* Text overlay */
-        .video-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #f8f8f2;
-            font-size: 24px;
-            font-weight: bold;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            color: #f8f8f2;
-            font-size: 24px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -147,7 +100,7 @@
     <p>Ready to visit Winter Wonderland? Choose the number of tickets you'd like and complete the form below to purchase your tickets!</p>
     
     <div class="form-container">
-        <form id="ticket-form" onsubmit="return showPopup(event)">
+        <form id="ticket-form" onsubmit="return redirectToSponsor(event)">
             <label for="name">Username</label>
             <input type="text" id="name" name="name" required placeholder="Enter your Username">
 
@@ -174,40 +127,16 @@
     </div>
 </section>
 
-<!-- Modal -->
-<div id="video-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <div class="video-overlay">You’re getting your ticket after this sponsor</div>
-        <video id="NordVPN-video" controls>
-            <source src="NordVPN.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
-
 <footer>
     © 2024 Winter Wonderland. All Rights Reserved.
 </footer>
 
 <script>
-    function showPopup(event) {
+    function redirectToSponsor(event) {
         event.preventDefault(); // Prevent form submission
-        const modal = document.getElementById('video-modal');
-        const video = document.getElementById('NordVPN-video');
-        modal.style.display = 'flex';
-        video.play();
+        window.location.href = "video.html"; // Redirect to the sponsor video page
         return false;
     }
-
-    function closePopup() {
-        const modal = document.getElementById('video-modal');
-        const video = document.getElementById('NordVPN-video');
-        modal.style.display = 'none';
-        video.pause();
-        video.currentTime = 0; // Reset video playback
-    }
 </script>
-
 </body>
 </html>
